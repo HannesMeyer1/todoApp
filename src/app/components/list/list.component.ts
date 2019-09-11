@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
   todos: Todo[] = [];
+  toggle(todo: Todo) {
+    todo.done = true;
+  }
 
-  constructor(public label: String) { }
+
+  constructor(public label: String) {
+    this.label
+  }
 
   ngOnInit() {
   }
