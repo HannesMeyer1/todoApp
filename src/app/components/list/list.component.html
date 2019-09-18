@@ -1,5 +1,13 @@
+<Table class=""/>
+<input type="search"><button (click)="search()">search</button>
 <ul>
-  <li *ngFor="let todo of todos"(click)="toggle(todo)>
-    {{ todo.label }}
+  <li *ngFor="let todo of todos" (click)="toggle(todo)" [class.fertig]="todo.done">
+    {{ todo.label }} <button (click)="delete(todo)">delete</button>
+    <i class="material-icons">
+      delete
+    </i>
+
   </li>
+
 </ul>
+<input [(ngModel)]="newTodo.label"><button (click)="save()">save</button>
